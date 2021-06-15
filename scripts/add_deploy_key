@@ -1,8 +1,7 @@
 #!/usr/bin/env Rscript
 
-Sys.setenv(VAULT_SERVER = "https://vault.dide.ic.ac.uk:8200",
-           VAULTR_AUTH_METHOD = "github",
-           VAULT_ROOT = "/secret/hiv-orderly")
+Sys.setenv(VAULT_ADDR = "https://vault.dide.ic.ac.uk:8200",
+           VAULTR_AUTH_METHOD = "github")
 
 
 add_deploy_key <- function(overwrite = FALSE) {
@@ -13,7 +12,7 @@ add_deploy_key <- function(overwrite = FALSE) {
   url_key <- sprintf("https://github.com/%s/settings/keys/new", user_repo)
   vault_path <- sprintf("secret/hiv-orderly/deploy-keys/%s", user_repo)
 
-  vault <- vaultr::vault_client(addr = "https://vault.dide.ic.ac.uk:8200")
+  vault <- vaultr::vault_client(login = TRUE)
 
   if (!is.null(vault$read(vault_path)) && !overwrite) {
     message(sprintf("Deploy key already exists for '%s'", user_repo))
