@@ -67,13 +67,13 @@ RUN install_packages --repo "https://mrc-ide.github.io/drat" \
         yaml \
         zip
 
-RUN install_packages --repo "https://www.vaccineimpact.org/drat/" \
-        orderly.sharepoint \
-        orderlyweb
-
 RUN install_remote \
         mrc-ide/naomi \
         mrc-ide/naomi.utils \
         reside-ic/spud
+
+RUN install_packages --repo "https://www.vaccineimpact.org/drat/" \
+        orderly.sharepoint \
+        orderlyweb
 
 WORKDIR /orderly
