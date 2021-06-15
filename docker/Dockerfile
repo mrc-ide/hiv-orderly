@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y \
         libgdal-dev \
         libgeos-dev \
         libjq-dev \
+        libpoppler-cpp-dev \
         libproj-dev \
         libprotobuf-dev \
         libssl-dev \
