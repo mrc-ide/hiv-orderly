@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-Sys.setenv(VAULT_SERVER = "https://vault.dide.ic.ac.uk",
+Sys.setenv(VAULT_SERVER = "https://vault.dide.ic.ac.uk:8200",
            VAULTR_AUTH_METHOD = "github",
            VAULT_ROOT = "/secret/hiv-orderly")
 
