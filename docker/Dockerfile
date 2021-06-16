@@ -67,6 +67,7 @@ RUN install_packages --repo "https://www.vaccineimpact.org/drat/" \
         spud \
         stringr \
         tidyr \
+        vaultr \
         yaml \
         zip
 
