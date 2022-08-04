@@ -46,7 +46,7 @@ RUN apt-get update && apt-get install -y \
 COPY bin /usr/local/bin/
 
 # Add new packages here (in alphabetical order)
-RUN install_packages --repo "https://www.vaccineimpact.org/drat/" \
+RUN install_packages --repo "https://mrc-ide.r-universe.dev" \
         ckanr \
         dplyr \
         drat \
@@ -55,6 +55,8 @@ RUN install_packages --repo "https://www.vaccineimpact.org/drat/" \
         haven \
         httr \
         jsonlite \
+        naomi \
+        naomi.utils \
         orderly.sharepoint \
         orderlyweb \
         pdftools \
@@ -70,9 +72,5 @@ RUN install_packages --repo "https://www.vaccineimpact.org/drat/" \
         vaultr \
         yaml \
         zip
-
-RUN install_remote \
-        mrc-ide/naomi \
-        mrc-ide/naomi.utils
 
 WORKDIR /orderly
