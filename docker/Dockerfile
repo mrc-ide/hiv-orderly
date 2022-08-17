@@ -55,7 +55,7 @@ RUN install_packages --repo "https://www.vaccineimpact.org/drat/" \
         haven \
         httr \
         jsonlite \
-        montagu-r \
+        montagu \
         orderly.sharepoint \
         orderlyweb \
         pdftools \
