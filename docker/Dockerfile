@@ -57,6 +57,8 @@ RUN install_packages --repo "https://mrc-ide.r-universe.dev" \
         jsonlite \
         naomi \
         naomi.utils \
+        lwgeom \
+        montagu \
         orderly.sharepoint \
         orderlyweb \
         pdftools \
