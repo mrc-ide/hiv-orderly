@@ -45,6 +45,9 @@ RUN apt-get update && apt-get install -y \
 
 COPY bin /usr/local/bin/
 
+# Temporarily install orderly1 alongside orderly
+RUN install_remote vimc/orderly@vimc-7135
+
 # Add new packages here (in alphabetical order)
 RUN install_packages --repo "https://mrc-ide.r-universe.dev" \
         ckanr \
